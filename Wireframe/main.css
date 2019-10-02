@@ -1,27 +1,30 @@
 * {
     box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
 @media screen and (min-width: 0px) {
     body {
+        margin: 0px;
+        padding: 0px;
         background: black;
         color: white;
         font-family: "Roboto", sans-serif;
         font-size: 1.2em;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         min-height: 100vh;
     }
 
     header {
         text-align: center;
-        vertical-align: center;
-        margin-bottom: auto;
+        flex-grow: 2;
     }
 
     footer {
         text-align: center;
+        margin-top: auto;
     }
 
     .quiz-progress {
@@ -29,6 +32,7 @@
         justify-content: space-between;
         align-items: center;
         background: #393939;
+        flex-grow: 2;
     }
 
     .quiz-form {
@@ -36,13 +40,13 @@
         flex-direction: column;
         background: rgb(109, 109, 109);
         min-height: 70vh;
+        flex-grow: 5;
     }
 
     .quiz-questions-answers {
         padding: 15px;
         background: #d9d9d9;
         color: black;
-        margin-bottom: auto;
     }
 
     .multiple-choice {
