@@ -14,6 +14,8 @@
             <p>Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
         </header>
 
+        <h1>Pre-quiz state</h1>
+
         <form class="quiz-form">
             <section class="quiz-progress">
                 <span class="question-number">Question: Not Started</span>
@@ -40,6 +42,96 @@
                 <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
             </span>
         </form>
+
+        <h1>When asking a question</h1>
+
+        <form class="quiz-form">
+                <section class="quiz-progress">
+                    <span class="question-number">Question: 1/16</span>
+                    <span class="question-grading">Correct: 0 Incorrect: 0</span>
+                </section>
+    
+                <section class="quiz-questions-answers">Who or what was the first thing to orbit the Earth?
+                    </section>
+                <span class="multiple-choice" role="question choices">
+                    <label for="user-answer-a" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-a" class="user-answer-a">
+                    A monkey</label>
+                    <label for="user-answer-b" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-b" class="user-answer-b">
+                    A dog</label>
+                    <label for="user-answer-c" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-c" class="user-answer-c">
+                    Buzz Aldrin</label>
+                    <label for="user-answer-d" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-d" class="user-answer-d">
+                    John Glenn</label>
+                </span>
+                <span role="quiz control buttons" class="quiz-control-buttons">
+                    <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart">
+                    <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
+                </span>
+            </form>
+
+        <h1>When the user answers correctly</h1>
+
+        <form class="quiz-form">
+                <section class="quiz-progress">
+                    <span class="question-number">Question: 1/16</span>
+                    <span class="question-grading">Correct: 1 Incorrect: 0</span>
+                </section>
+    
+                <section class="quiz-questions-answers correct-box">The first creature from Earth to orbit the planet was Laika the dog, sent on the Soviet Sputnik 2 in 1957.
+                    </section>
+                <span class="multiple-choice" role="question choices">
+                    <label for="user-answer-a" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-a" class="user-answer-a">
+                    A monkey</label>
+                    <label for="user-answer-b" class="radio-labels correct">
+                        <input checked type="radio" name="user-answers" id="user-answer-b" class="user-answer-b">
+                    A dog <strong>Correct!</strong></label>
+                    <label for="user-answer-c" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-c" class="user-answer-c">
+                    Buzz Aldrin</label>
+                    <label for="user-answer-d" class="radio-labels">
+                        <input type="radio" name="user-answers" id="user-answer-d" class="user-answer-d">
+                    John Glenn</label>
+                </span>
+                <span role="quiz control buttons" class="quiz-control-buttons">
+                    <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart">
+                    <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
+                </span>
+            </form>
+
+            <h1>When the user answers incorrectly</h1>
+
+            <form class="quiz-form">
+                    <section class="quiz-progress">
+                        <span class="question-number">Question: 1/16</span>
+                        <span class="question-grading">Correct: 0 Incorrect: 1</span>
+                    </section>
+        
+                    <section class="quiz-questions-answers incorrect-box">The first creature from Earth to orbit the planet was Laika the dog, sent on the Soviet Sputnik 2 in 1957.
+                        </section>
+                    <span class="multiple-choice" role="question choices">
+                        <label for="user-answer-a" class="radio-labels">
+                            <input type="radio" name="user-answers" id="user-answer-a" class="user-answer-a">
+                        A monkey</label>
+                        <label for="user-answer-b" class="radio-labels">
+                            <input type="radio" name="user-answers" id="user-answer-b" class="user-answer-b">
+                        A dog</label>
+                        <label checked for="user-answer-c" class="radio-labels incorrect">
+                            <input type="radio" name="user-answers" id="user-answer-c" class="user-answer-c">
+                        Buzz Aldrin  <strong>Incorrect</strong></label>
+                        <label for="user-answer-d" class="radio-labels">
+                            <input type="radio" name="user-answers" id="user-answer-d" class="user-answer-d">
+                        John Glenn</label>
+                    </span>
+                    <span role="quiz control buttons" class="quiz-control-buttons">
+                        <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart">
+                        <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
+                    </span>
+                </form>
 
         
 
