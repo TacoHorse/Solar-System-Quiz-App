@@ -30,10 +30,10 @@ https://solarsystem.nasa.gov/planets/overview/
 
 ### Mercury
 
-**Circumference:* 15,329.1 KM
-**Distance from Sun in light minutes:* 3.879122 mins
-**Planet type: Terrestrial*
-**Daytime temperature (max):* 430 degrees Celsius
+* *Circumference:* 15,329.1 KM
+* *Distance from Sun in light minutes:* 3.879122 mins
+* *Planet type: Terrestrial*
+* *Daytime temperature (max):* 430 degrees Celsius
 
 Which is bigger, Mercury or the Moon?
 
