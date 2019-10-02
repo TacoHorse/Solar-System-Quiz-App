@@ -5,12 +5,12 @@
 **The app is a simple quiz application asking basic questions about the solar system.**
 
 # Concepts Covered
-⋅⋅* Research and Project Planning
-⋅⋅* Prototyping and Wireframing
-⋅⋅* Pseudocode and Project Flow
-⋅⋅* Semantic, accesible HTML and CSS
-⋅⋅* Responsive layout design
-⋅⋅* Interactive Web Applications using jQuery
+* Research and Project Planning
+* Prototyping and Wireframing
+* Pseudocode and Project Flow
+* Semantic, accesible HTML and CSS
+* Responsive layout design
+* Interactive Web Applications using jQuery
 
 # Project Scope Analysis
 ### Quiz App Project - Our Solar System
