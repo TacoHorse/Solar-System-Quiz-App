@@ -15,7 +15,7 @@
 # Project Scope Analysis
 ### Quiz App Project - Our Solar System
 
-This document is intended to be the primary planning and development repository for the Quiz App Project of Sean Cowan for the Bloc/Thinkful Web Developer Track program.  It will outline the scope of the project, the questions that will be asked, sources for the questions, and the visual concept for the application.  As the purpose of this application is to practice fundamental skills in jQuery and interactive web application development a single high quality source will be used for all questions.  This is to facilitate a faster dev process for the app. The source to be used will be NASA's official website. 
+>This document is intended to be the primary planning and development repository for the Quiz App Project of Sean Cowan for the Bloc/Thinkful Web Developer Track program.  It will outline the scope of the project, the questions that will be asked, sources for the questions, and the visual concept for the application.  As the purpose of this application is to practice fundamental skills in jQuery and interactive web application development a single high quality source will be used for all questions.  This is to facilitate a faster dev process for the app. The source to be used will be NASA's official website. 
 https://solarsystem.nasa.gov/planets/overview/
 
 ## Question Concept
