@@ -1,5 +1,4 @@
 # Question Outline
-
 #### This is the question repository used for the app.  Sources for the research are also provided.
 
 ## Mercury
