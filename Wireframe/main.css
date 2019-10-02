@@ -11,10 +11,12 @@
         background: black;
         color: white;
         font-family: "Roboto", sans-serif;
-        font-size: 3rem;
+        font-size: 2.5rem;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         min-height: 100vh;
+        text-rendering: optimizeLegibility;
     }
 
     header {
@@ -36,7 +38,7 @@
         padding: 1vh;
         align-items: center;
         background: #393939;
-        flex-grow: 2;
+        flex-grow: 0;
     }
 
     .quiz-form {
@@ -73,5 +75,41 @@
     .quiz-buttons {
         width: 50%;
         height: 7vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 1.7em;
+    }
+
+    .quiz-form{
+        flex-grow: 1;
+        min-height: 50vh;
+    }
+
+    header {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    body {
+        font-size: 1em;
+        background: black url("solarsys.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .quiz-form {
+        width: 500px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 250px;
+    }
+
+    .quiz-buttons {
+        width: 150px;
+        height: 50px;
     }
 }
