@@ -16,6 +16,7 @@
 ### Quiz App Project - Our Solar System
 
 >This document is intended to be the primary planning and development repository for the Quiz App Project of Sean Cowan for the Bloc/Thinkful Web Developer Track program.  It will outline the scope of the project, the questions that will be asked, sources for the questions, and the visual concept for the application.  As the purpose of this application is to practice fundamental skills in jQuery and interactive web application development a single high quality source will be used for all questions.  This is to facilitate a faster dev process for the app. The source to be used will be NASA's official website. 
+
 https://solarsystem.nasa.gov/planets/overview/
 
 ## Question Concept
@@ -23,29 +24,16 @@ https://solarsystem.nasa.gov/planets/overview/
 
 ## Visual Concept 
 
-Users will take a 'journey through the Solar System'.  
+>Users will take a 'journey through the Solar System'.  A simple lineup of the planets, in order will appear at the top of the page.  Their images will be greyed out except for the one which the user is currently on; which will be full color/brightness.   A small factoid of the planet will also be displayed.  To the right hand side of the screen will be a progress tracker indicating the current planet, question, and score of the user.  Control buttons will appear at the bottom of the form interface.  The form interface will be a horizontally centered interface and the background of the quiz page will be a high quality photo the current planet.  
 
-A simple lineup of the planets, in order will appear at the top of the page.  Their images will be greyed out except for the one which the user is currently on; which will be full color/brightness.   
+## Question Outline
 
-A small factoid of the planet will also be displayed.
+### Mercury
 
-To the right hand side of the screen will be a progress tracker indicating the current planet, question, and score of the user.
-
-Control buttons will appear at the bottom of the form interface.
-
-The form interface will be a horizontally centered interface and the background of the quiz page will be a high quality photo the current planet.  
-
-Question Outline
-
-Mercury
-
-Circumference: 15,329.1 KM
-
-Distance from Sun in light minutes: 3.879122 mins
-
-Planet type: Terrestrial 
-
-Daytime temperature (max): 430 degrees Celsius
+**Circumference:* 15,329.1 KM
+**Distance from Sun in light minutes:* 3.879122 mins
+**Planet type: Terrestrial*
+**Daytime temperature (max):* 430 degrees Celsius
 
 Which is bigger, Mercury or the Moon?
 
