@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Solar System Quiz</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <body>
+        <header class="quiz-intro-planet-profile">
+            <h1>Solar System Quiz</h1>
+            <p>Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
+        </header>
+
+        <section class="quiz-progress">
+            <span class="question-number">Question: Not Started out of  16</span>
+            <span class="question-grading">Correct: 0 Incorrect: 0</span>
+        </section>
+
+        <form class="quiz-form">
+            <section class="quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>
+            <span class="multiple-choice" role="question choices">
+                <label for="user-answer-a" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-a" class="user-answer-a">
+                A</label>
+                <label for="user-answer-b" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-b" class="user-answer-b">
+                B</label>
+                <label for="user-answer-c" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-c" class="user-answer-c">
+                C</label>
+                <label for="user-answer-d" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-d" class="user-answer-d">
+                D</label>
+            </span>
+            <span role="quiz control buttons" class="quiz-control-buttons">
+                <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart" disabled>
+                <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
+            </span>
+        </form>
+
+        <footer class="quiz-footer">Social and other links will go here</footer>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!-- Include and check jQuery library integrity -->
+</html>
