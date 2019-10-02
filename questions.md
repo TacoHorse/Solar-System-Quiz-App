@@ -1,292 +1,290 @@
 # Question Outline
 
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
+#### This is the question repository used for the app.  Sources for the research are also provided.
 
 ## Mercury
 
-Circumference: 15,329.1 KM
+>**Circumference: 15,329.1 KM**
+>
+>**Distance from Sun in light minutes: 3.879122 mins**
+>
+>**Planet type: Terrestrial**
+>
+>**Daytime temperature (max): 430 degrees Celsius**
 
-Distance from Sun in light minutes: 3.879122 mins
+	Which is bigger, Mercury or the Moon?
 
-Planet type: Terrestrial
+>a. Moon is bigger.
+>
+>**b. Mercury is bigger.***
+>
+>c. They are the same size. 
+>
+>d. That's no moon its a space station.
 
-Daytime temperature (max): 430 degrees Celsius
-
-Which is bigger, Mercury or the Moon?
-
-a. Moon is bigger.
-
-b. Mercury is bigger.
-
-c. They are the same size. 
-
-d. That's no moon its a space station.
-
-Mercury is slightly larger than the moon.
+*Mercury is slightly larger than the moon.*
 	
-How many Earth days does Mercury take to orbit the sun?
+	How many Earth days does Mercury take to orbit the sun?
 
-a.	101 Earth days
+>a.  101 Earth days
+>
+>b.  75 Earth days
+>
+>c.  81 Earth days
+>
+>**d.  88 Earth days**
 
-b.	75 Earth days
+*Mercury has a short orbit but a very long rotation.  It takes just 88 Earth days to orbit the Sun, but one day on Mercury is 59 Earth days!*
 
-c.	81 Earth days
+## Venus
 
-d.	88 Earth days
+>**Circumference: 38,024.6 KM**
+>
+>**Distance from Sun in light minutes: 6.014074 mins**
+>
+>**Planet type: Terrestrial**
+>
+>**Daytime temperature (average): 465 degrees Celsius**
 
-Mercury has a short orbit but a very long rotation.  It takes just 88 Earth days to orbit the Sun, but one day on Mercury is 59 Earth days!
+	Who are the majority of Venus' surface features named after?
 
-Venus
+>a.  Animals
+>
+>b.  Famous or noteworthy men
+>
+>**c.  Famous or noteworthy women**
+>
+>d.  Places on Earth
 
-Circumference: 38,024.6 KM
 
-Distance from Sun in light minutes: 6.014074 mins
+*Nearly every surface feature on the planet is named after both mythological and real women from Earth.*
 
-Planet type: Terrestrial
 
-Daytime temperature (average): 465 degrees Celsius
+	Venus is a goddess from which ancient mythology?
 
-Who are the majority of Venus' surface features named after?
+>a.  Greek
+>
+>b.  Egyptian
+>
+>**c.  Roman**
+>
+>d.  Sumerian
 
-a.	Animals
 
-b.	Famous or noteworthy men
+*Venus is the Roman goddess of love and beauty who was known as Aphrodite in Greek mythology.*
 
-c.	Famous or noteworthy women
 
-d.	Places on Earth
+## Earth
 
+>**Circumference: 40,030.2 KM**
+>
+>**Distance from Sun in light minutes: 8.326467 mins**
+>
+>**Planet type: Terrestrial**
+>
+>**Daytime temperature (average): 14 degrees Celsius**
 
-Nearly every surface feature on the planet is named after both mythological and real women from Earth.
+	Who or what was the first thing to orbit the Earth?
 
+>a.  A monkey
+>
+>**b.  A dog**
+>
+>c.  Buzz Aldrin
+>
+>d.  John Glenn
 
-Venus is a goddess from which ancient mythology?
+*The first creature from Earth to orbit the planet was Laika the dog, sent on the Soviet Sputnik 2 in 1957.*
 
-a.	Greek
+	How old is the name 'Earth' for our planet?
 
-b.	Egyptian
+>a.  1500+ Years
+>
+>b.  2000+ Years
+>
+>**c.  1000+ Years**
+>
+>d.  3000+ Years
 
-c.	Roman
+*Humans have called the planet 'Earth' for at least 1000 years, its name is Germanic in origin and means simply 'the ground'.*
 
-d.	Sumerian
 
+## Mars
 
-Venus is the Roman goddess of love and beauty who was known as Aphrodite in Greek mythology.
+>**Circumference: 21,296.9 KM**
+>
+>**Distance from Sun in light minutes: 13.800348 mins**
+>
+>**Planet type: Terrestrial**
+>
+>**Daytime temperature (range): +20 to -153 degrees Celsius**
 
+	How long is Mars' longest canyon?
 
-Earth
+>a.  50 kilometers
+>
+>b.  545 kilometers
+>
+>c.  10,361 kilometers
+>
+>**d.  4,800 kilometers**
 
-Circumference: 40,030.2 KM
+*The Martian canyon Valles Marineris is 4,800 kilometers long and up to 320 kilometers wide in some places.  This is roughly 10 times the size of the Grand Canyon in Nevada.*
 
-Distance from Sun in light minutes: 8.326467 mins
+	Mars has the largest Volcano in our Solar System, what is it's name?
 
-Planet type: Terrestrial
+>a.  Mount Vesuvius 
+>
+>b.  Mount Rushmore
+>
+>**c.  Olympus Mons**
+>
+>d.  Ben Nevis
 
-Daytime temperature (average): 14 degrees Celsius
+*Olympus Mons is monstrous in size, it is 3 times taller than Mount Everest and its base covers an area the size of New Mexico!*
 
-Who or what was the first thing to orbit the Earth?
 
-a.	A monkey
+## Jupiter
 
-b.	A dog
+>**Circumference: 439,263.8 KM**
+>
+>**Distance from Sun in light minutes: 43.748913 mins**
+>
+>**Planet Type: Gas Giant**
+>
+>**Daytime temperature: -145 degrees Celsius**
 
-c.	Buzz Aldrin
+	Jupiter is known for having many moons, how many does it have?
 
-d.	John Glenn
+>a.  45
+>
+>b.  63
+>
+>c.  102
+>
+>**d.  79**
 
-The first creature from Earth to orbit the planet was Laika the dog, sent on the Soviet Sputnik 2 in 1957.
+*Jupiter has 79 known moons, and possibly more!  It has the most moons of any planet in our Solar System.*
 
-How old is the name 'Earth' for our planet?
 
-a.	1500+ Years
+	Jupiter takes a lot longer to travel around the Sun when compared to the Earth.  How long does it take for one complete orbit?
 
-b.	2000+ Years
+>a.  1,438 Earth days
+>
+>b.  750 Earth days
+>
+>c.  6,000 Earth days
+>
+>**d.  4,333 Earth days**
 
-c.	1000+ Years
+*That's right, 4,333 days! One year on Jupiter is about 12 years on Earth.*
 
-d.	3000+ Years
 
-Humans have called the planet 'Earth' for at least 1000 years, its name is Germanic in origin and means simply 'the ground'.
+## Saturn
 
+>**Circumference: 365,882.4 KM**
+>
+>**Distance from Sun in light minutes: 83.523509 mins**
+>
+>**Planet Type: Gas Giant**
+>
+>**Daytime temperature: -177.8 degrees Celsius**
 
-Mars
+	How many rings does Saturn have?
 
-Circumference: 21,296.9 KM
+>a.  Nine
+>
+>b.  Four
+>
+>c.  Twelve
+>
+>**d.  Seven**
 
-Distance from Sun in light minutes: 13.800348 mins
+*Saturn has seven distinct rings with clear divisions between them, in addition there are thousands of smaller ringlets.  Saturn has the most complex ring system of any planet in the Solar System.*
 
-Planet type: Terrestrial
+	Which two gases is Saturn's atmosphere primarily comprised of?
 
-Daytime temperature (range): +20 to -153 degrees Celsius
+>a.  Methane and Sulfur
+>
+>b.  Hexane and Oxygen
+>
+>**c.  Hydrogen and Helium**
+>
+>d.  Nitrogen and Phosphine
 
-How long is Mars' longest canyon?
+*Saturn is made up mostly of Hydrogen and Helium these gases create extremely turbulent winds with speeds in excess of 1,600 feet per second!*
 
-a.	50 kilometers
 
-b.	545 kilometers
+## Uranus
 
-c.	10,361 kilometers
+>**Circumference: 159,354.1 KM**
+>
+>**Distance from Sun in light minutes: 164.918561 mins**
+>
+>**Planet Type: Ice Giant**
+>
+>**Daytime temperature: -216.11 degrees Celsius**
 
-d.	4,800 kilometers
+	While it is not known for having rings, Uranus actually has more than Saturn, they are just not as large or vibrant.  How many does it have?
 
-The Martian canyon Valles Marineris is 4,800 kilometers long and up to 320 kilometers wide in some places.  This is roughly 10 times the size of the Grand Canyon in Nevada. 
+>a.  15
+>
+>b.  19
+>
+>c.  8
+>
+>**d.  11**
 
-Mars has the largest Volcano in our Solar System, what is it's name?
+*Uranus has eleven rings, it has nine, greyish colored inner rings, and two outer rings, one which is reddish and the other which is blue.*
 
-a.	Mount Vesuvius 
 
-b.	Mount Rushmore
+	Even though it is an Ice Giant Uranus has a hot rocky core.  What temperatures can it reach?
 
-c.	Olympus Mons
+>a.  4,500 degrees Celsius
+>
+>b.  6,100 degrees Celsius
+>
+>c.  9,001 degrees Celsius
+>
+>**d.  4,982 degrees Celsius**
 
-d.	Ben Nevis
+*Uranus can reach temperatures of over 4,982 degrees Celsius in its core!*
 
-Olympus Mons is monstrous in size, it is 3 times taller than Mount Everest and its base covers an area the size of New Mexico!
 
+## Neptune
 
-Jupiter
+>**Circumference: 154,704.6 KM**
+>
+>**Distance from Sun in light minutes: 248.956123 mins**
+>
+>**Planet Type: Ice Giant**
+>
+>**Daytime temperature: -235 degrees Celsius**
 
-Circumference: 439,263.8 KM
+	Neptune is the farthest planet from the Sun, how long does it take to orbit the Sun in Earth days?
 
-Distance from Sun in light minutes: 43.748913 mins
+>a.  20,780 Earth days
+>
+>b.  14,210 Earth days
+>
+>**c.  60,190 Earth days**
+>
+>d.  73,230 Earth days
 
-Planet Type: Gas Giant
+*Neptune takes a whopping 60,190 Earth days to orbit the sun once.  That's 165 years!*
 
-Daytime temperature: -145 degrees Celsius
+	Neptune is the windiest planet in our Solar System, what is the fastest wind speed we've recorded?
 
-Jupiter is known for having many moons, how many does it have?
+>a.  1,200 kilometers per hour
+>
+>b.  2,500 kilometers per hour
+>
+>*c.  2,000 kilometers per hour*
+>
+>d.  1,000 kilometers per hour
 
-a.	45
 
-b.	63
-
-c.	102
-
-d.	79
-
-Jupiter has 79 known moons, and possibly more!  It has the most moons of any planet in our Solar System.
-
-
-Jupiter takes a lot longer to travel around the Sun when compared to the Earth.  How long does it take for one complete orbit?
-
-a.	1,438 Earth days
-
-b.	750 Earth days
-
-c.	6,000 Earth days
-
-d.	4,333 Earth days
-
-That's right, 4,333 days! One year on Jupiter is about 12 years on Earth.
-
-
-Saturn
-
-Circumference: 365,882.4 KM
-
-Distance from Sun in light minutes: 83.523509 mins
-
-Planet Type: Gas Giant
-
-Daytime temperature: -177.8 degrees Celsius
-
-How many rings does Saturn have?
-
-a.	Nine
-
-b.	Four
-
-c.	Twelve
-
-d.	Seven
-
-Saturn has seven distinct rings with clear divisions between them, in addition there are thousands of smaller ringlets.  Saturn has the most complex ring system of any planet in the Solar System.
-
-Which two gases is Saturn's atmosphere primarily comprised of?
-
-a.	Methane and Sulfur
-
-b.	Hexane and Oxygen
-
-c.	Hydrogen and Helium
-
-d.	Nitrogen and Phosphine
-
-Saturn is made up mostly of Hydrogen and Helium these gases create extremely turbulent winds with speeds in excess of 1,600 feet per second!
-
-
-Uranus
-
-Circumference: 159,354.1 KM
-
-Distance from Sun in light minutes: 164.918561 mins
-
-Planet Type: Ice Giant
-
-Daytime temperature: -216.11 degrees Celsius
-
-While it is not known for having rings, Uranus actually has more than Saturn, they are just not as large or vibrant.  How many does it have?
-
-a.	15
-
-b.	19
-
-c.	8
-
-d.	11
-
-Uranus has eleven rings, it has nine, greyish colored inner rings, and two outer rings, one which is reddish and the other which is blue.
-
-
-Even though it is an Ice Giant Uranus has a hot rocky core.  What temperatures can it reach?
-
-a.	4,500 degrees Celsius
-
-b.	6,100 degrees Celsius
-
-c.	9,001 degrees Celsius
-
-d.	4,982 degrees Celsius
-
-Uranus can reach temperatures of over 4,982 degrees Celsius in its core!
-
-
-Neptune
-
-Circumference: 154,704.6 KM
-
-Distance from Sun in light minutes: 248.956123 mins
-
-Planet Type: Ice Giant
-
-Daytime temperature: -235 degrees Celsius
-
-Neptune is the farthest planet from the Sun, how long does it take to orbit the Sun in Earth days?
-
-a.	20,780 Earth days
-
-b.	14,210 Earth days
-
-c.	60,190 Earth days
-
-d.	73,230 Earth days
-
-Neptune takes a whopping 60,190 Earth days to orbit the sun once.  That's 165 years!
-
-Neptune is the windiest planet in our Solar System, what is the fastest wind speed we've recorded?
-
-a.	1,200 kilometers per hour
-
-b.	2,500 kilometers per hour
-
-c.	2,000 kilometers per hour
-
-d.	1,000 kilometers per hour
-
-
-Winds on Neptune reach speeds of 2,000 kilometers per hour or more, for comparison the fastest winds seen on Earth are bout 400 kilometers per hour.
+*Winds on Neptune reach speeds of 2,000 kilometers per hour or more, for comparison the fastest winds seen on Earth are bout 400 kilometers per hour.*
 
 
 # Bibliographic Information
