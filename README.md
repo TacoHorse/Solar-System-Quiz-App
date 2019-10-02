@@ -26,14 +26,17 @@ https://solarsystem.nasa.gov/planets/overview/
 
 >Users will take a 'journey through the Solar System'.  A simple lineup of the planets, in order will appear at the top of the page.  Their images will be greyed out except for the one which the user is currently on; which will be full color/brightness.   A small factoid of the planet will also be displayed.  To the right hand side of the screen will be a progress tracker indicating the current planet, question, and score of the user.  Control buttons will appear at the bottom of the form interface.  The form interface will be a horizontally centered interface and the background of the quiz page will be a high quality photo the current planet.  
 
-## Question Outline
+# Question Outline
 
-### Mercury
+Mercury
 
-* *Circumference:* 15,329.1 KM
-* *Distance from Sun in light minutes:* 3.879122 mins
-* *Planet type: Terrestrial*
-* *Daytime temperature (max):* 430 degrees Celsius
+Circumference: 15,329.1 KM
+
+Distance from Sun in light minutes: 3.879122 mins
+
+Planet type: Terrestrial
+
+Daytime temperature (max): 430 degrees Celsius
 
 Which is bigger, Mercury or the Moon?
 
@@ -41,7 +44,7 @@ a.	Moon is bigger.
 
 b.	Mercury is bigger.
 
-c.	They are the same size.
+c.	They are the same size. 
 
 d.	That's no moon its a space station.
 
@@ -58,7 +61,6 @@ c.	81 Earth days
 d.	88 Earth days
 
 Mercury has a short orbit but a very long rotation.  It takes just 88 Earth days to orbit the Sun, but one day on Mercury is 59 Earth days!
-
 
 Venus
 
