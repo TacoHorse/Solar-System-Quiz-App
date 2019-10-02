@@ -14,8 +14,8 @@ While you're building your quiz app, you'll need to keep in mind what your app m
 * receive textual feedback about their answer. 
 * If they were incorrect, they should be told the correct answer.
 * be moved onto the next question (or interact with an element to move on).
-8.Users should be shown their overall score at the end of the quiz. In other words, how many questions they got right out of the total questions asked.
-9.Users should be able to start a new quiz.
+8. Users should be shown their overall score at the end of the quiz. In other words, how many questions they got right out of the total questions asked.
+9. Users should be able to start a new quiz.
 
 ## Technical requirements
 #### Your quiz app must:
