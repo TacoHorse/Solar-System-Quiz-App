@@ -1,5 +1,9 @@
 # Question Outline
 
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
 ## Mercury
 
 Circumference: 15,329.1 KM
@@ -12,13 +16,13 @@ Daytime temperature (max): 430 degrees Celsius
 
 Which is bigger, Mercury or the Moon?
 
-a.	Moon is bigger.
+a. Moon is bigger.
 
-b.	Mercury is bigger.
+b. Mercury is bigger.
 
-c.	They are the same size. 
+c. They are the same size. 
 
-d.	That's no moon its a space station.
+d. That's no moon its a space station.
 
 Mercury is slightly larger than the moon.
 	
@@ -295,7 +299,3 @@ Winds on Neptune reach speeds of 2,000 kilometers per hour or more, for comparis
 
 >Sharp, Tim. “What Is Earth's Average Temperature?” Space.com, Space, 23 Apr. 2018, www.space.com/17816-earth-
 temperature.html#targetText=GISS%20data%20show%20global%20average,58.62%20F%20(14.9%20C).
-
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
