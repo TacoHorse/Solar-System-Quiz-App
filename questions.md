@@ -16,7 +16,7 @@
 
 >a. Moon is bigger.
 >
->**b. Mercury is bigger.***
+>**b. Mercury is bigger.**
 >
 >c. They are the same size. 
 >
