@@ -313,14 +313,14 @@ d.	1,000 kilometers per hour
 Winds on Neptune reach speeds of 2,000 kilometers per hour or more, for comparison the fastest winds seen on Earth are bout 400 kilometers per hour.
 
 
-Bibliographic Information
+# Bibliographic Information
 
-These are all the sources used to compile these questions.
+	These are all the sources used to compile these questions.
 
-Dunbar, Brian. “What Is Jupiter?” NASA, NASA, 1 June 2015, www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-jupiter-58.html.
+>Dunbar, Brian. “What Is Jupiter?” NASA, NASA, 1 June 2015, www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-jupiter-58.html.
 
-NASA, NASA. “Planets in Our Solar System.” NASA, NASA, 27 Nov. 2017, www.solarsystem.nasa.gov/planets/overview/.
+>NASA, NASA. “Planets in Our Solar System.” NASA, NASA, 27 Nov. 2017, www.solarsystem.nasa.gov/planets/overview/.
 
-Sharp, Tim. “What Is Earth's Average Temperature?” Space.com, Space, 23 Apr. 2018, www.space.com/17816-earth-
+>Sharp, Tim. “What Is Earth's Average Temperature?” Space.com, Space, 23 Apr. 2018, www.space.com/17816-earth-
 temperature.html#targetText=GISS%20data%20show%20global%20average,58.62%20F%20(14.9%20C).
 
