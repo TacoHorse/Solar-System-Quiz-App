@@ -3,6 +3,7 @@
 ### Created by Sean Cowan
 
 **The app is a simple quiz application asking basic questions about the solar system.**
+Specific requirements for the project assignment can be found in requirements.md and a repository of the questions asked can be found in questions.md
 
 # Concepts Covered
 * Research and Project Planning
