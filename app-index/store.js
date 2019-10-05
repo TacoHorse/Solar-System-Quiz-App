@@ -288,8 +288,8 @@ const STORE = {
             }
         ],
     }],
-    currentPlanet: 0,
-    questionNumber: 4,
+    currentPlanet: 'not-started',
+    questionNumber: 2,
     scoreCorrect: 0,
     scoreIncorrect: 0
 }

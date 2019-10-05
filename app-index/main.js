@@ -1,6 +1,7 @@
 `use strict`
 
 function serveQuiz() {
+    console.log(STORE.planets[0].mercury[2].facts);
     renderCurrentFormState();
     // validateUserAnswer('jupiter', 9);
     // handleUserScore(true);
@@ -8,26 +9,11 @@ function serveQuiz() {
     // renderQuestion('venus');
     // renderOptions('venus');
     // renderUserInformation(position, score);
+    renderPlanetProfile();
 }
 
 function renderCurrentFormState() {
-    /* This function will render the current state of the form
-     It will:
-     1. Listen for when the user clicks a button and then,
-      a. if the user hits stop/restart, they will be taken back to question 1 with a reset score
-      b. if the user hits next question,
-     2. Check to see what the current position and state the user is in
-      a. Pre-answer: User has not yet submitted and answer for current question
-      b. Correct: User has entered a correct answer.
-      c. Incorrect: User has enetered an incorrect answer.
-          i. When user is in 'pre-answer' state the next question button validates their answer
-          ii.  When they are in either Correct or Incorrect the next question button moves to the
-          next question in pre-answer state.
-          iii.  Correct and Incorrect are both the 'post-answer' state, they differ
-          only in color and which radio is highlighted
-    3.  Increment and update user's position and score
-    4. Output the apprporiate form state given the above */
-    console.log('`renderCurrentFormState` ran');
+    $()
 }
 
 /*Check the user's input answer against the correct answer
@@ -139,7 +125,35 @@ function renderUserInformation(position, score) {
     $('.js-quiz-progress').replaceWith(output);
 }
 
-// Takes a planet name as an input and returns its number
+function renderPlanetProfile () {
+    if (STORE.questionNumber === 0) {
+        let output = `<h1>Solar System Quiz</h1>
+        <p>Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>`;
+        $('.js-quiz-intro-planet-profile').append(output);
+    }
+    else {
+        for (let i = 0; i < STORE.planets.length; i++) {
+            let planet = Object.keys(STORE.planets[i]).toString();
+            /* for (let j = 0; j < STORE.planets[i][planet].length; j++) {
+                console.log(STORE.planets[i][planet][j]);
+            }*/
+            
+            console.log(planet);
+            for (let j = 0; j < STORE.planets[i][planet].length; j++) {
+                let id = STORE.planets[i][planet][j].id;
+                if (typeof(id) != 'undefined') { 
+                    if (id === STORE.questionNumber) {
+                        let output = `<h1>${planet}</h1>
+                        <p></p>`;
+                         $('.js-quiz-intro-planet-profile').append(output);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Takes a planet name as an input and returns its (array position) number
 function planetToNumber(planet) {
     let planetNum = 0;
     switch (planet) {
