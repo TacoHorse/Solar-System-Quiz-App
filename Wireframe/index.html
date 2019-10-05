@@ -17,24 +17,24 @@
         <h1>Pre-quiz state</h1>
 
         <form class="quiz-form">
-            <section class="quiz-progress">
+            <section class="quiz-progress js-quiz-progress">
                 <span class="question-number">Question: Not Started</span>
                 <span class="question-grading">Correct: 0 Incorrect: 0</span>
             </section>
 
-            <section class="quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>
-            <span class="multiple-choice" role="question choices">
-                <label for="user-answer-a" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-a" class="user-answer-a">
+            <section class="quiz-questions-answers js-quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>
+            <span class="multiple-choice js-multiple-choice" role="question choices">
+                <label for="user-answer-0" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-0" class="user-answer-0">
                 A</label>
-                <label for="user-answer-b" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-b" class="user-answer-b">
+                <label for="user-answer-1" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-1" class="user-answer-1">
                 B</label>
-                <label for="user-answer-c" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-c" class="user-answer-c">
-                C</label>
-                <label for="user-answer-d" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-d" class="user-answer-d">
+                <label for="user-answer-2" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-2" class="user-answer-2" checked>
+                79</label>
+                <label for="user-answer-3" class="radio-labels">
+                    <input type="radio" name="user-answers" id="user-answer-3" class="user-answer-3">
                 D</label>
             </span>
             <span role="quiz control buttons" class="quiz-control-buttons">
@@ -43,9 +43,7 @@
             </span>
         </form>
 
-        <h1>When asking a question</h1>
-
-        <form class="quiz-form">
+        <!--  <form class="quiz-form">
                 <section class="quiz-progress">
                     <span class="question-number">Question: 1/16</span>
                     <span class="question-grading">Correct: 0 Incorrect: 0</span>
@@ -131,12 +129,13 @@
                         <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart">
                         <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Next Question">
                     </span>
-                </form>
+                </form> -->
 
         
 
         <footer class="quiz-footer"><span>Social and other links will go here</span></footer>
     </body>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!-- Include and check jQuery library integrity -->
+    <script src="store.js"></script>
+    <script src="main.js"></script>
 </html>
