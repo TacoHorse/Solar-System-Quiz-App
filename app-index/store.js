@@ -289,7 +289,7 @@ const STORE = {
         ],
     }],
     currentPlanet: 'not-started',
-    questionNumber: 2,
+    questionNumber: 0,
     scoreCorrect: 0,
     scoreIncorrect: 0
 }

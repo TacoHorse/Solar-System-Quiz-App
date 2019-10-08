@@ -10,6 +10,8 @@
     
     <body>
         <header class="quiz-intro-planet-profile js-quiz-intro-planet-profile">
+            <h1>Solar System Quiz</h1>
+            <p>Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
         </header>
         <form class="quiz-form js-quiz-form">
             <section class="quiz-progress js-quiz-progress">
@@ -26,15 +28,15 @@
                     <input type="radio" name="user-answers" id="user-answer-1" class="user-answer-1">
                 B</label>
                 <label for="user-answer-2" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-2" class="user-answer-2" checked>
-                79</label>
+                    <input type="radio" name="user-answers" id="user-answer-2" class="user-answer-2">
+                C</label>
                 <label for="user-answer-3" class="radio-labels">
                     <input type="radio" name="user-answers" id="user-answer-3" class="user-answer-3">
                 D</label>
             </span>
-            <span role="quiz control buttons" class="quiz-control-buttons">
-                <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons" value="Stop/Restart" disabled>
-                <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons" value="Start Quiz">
+            <span role="quiz-control-buttons" class="quiz-control-buttons js-quiz-control-buttons">
+                <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="js-quiz-buttons js-quiz-restart-button" value="Stop/Restart" disabled>
+                <input type="button" name="next-question-button" id="next-question-button" class="js-quiz-buttons js-quiz-next-button" value="Start Quiz">
             </span>
         </form>
 
