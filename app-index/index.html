@@ -13,7 +13,7 @@
             <h1>Solar System Quiz</h1>
             <p>Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
         </header>
-        <form class="quiz-form js-quiz-form">
+        <form class="quiz-form js-quiz-form" data-form-state="asking">
             <section class="quiz-progress js-quiz-progress">
                 <span class="question-number">Question: Not Started</span>
                 <span class="question-grading">Correct: 0 Incorrect: 0</span>
@@ -22,16 +22,16 @@
             <section class="quiz-questions-answers js-quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>
             <span class="multiple-choice js-multiple-choice" role="question choices">
                 <label for="user-answer-0" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-0" class="user-answer-0">
+                    <input type="radio" name="user-answers" id="user-answer-0" class="user-answers js-user-answers">
                 A</label>
                 <label for="user-answer-1" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-1" class="user-answer-1">
+                    <input type="radio" name="user-answers" id="user-answer-1" class="user-answers js-user-answers">
                 B</label>
                 <label for="user-answer-2" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-2" class="user-answer-2">
+                    <input type="radio" name="user-answers" id="user-answer-2" class="user-answers js-user-answers">
                 C</label>
                 <label for="user-answer-3" class="radio-labels">
-                    <input type="radio" name="user-answers" id="user-answer-3" class="user-answer-3">
+                    <input type="radio" name="user-answers" id="user-answer-3" class="user-answers js-user-answers">
                 D</label>
             </span>
             <span role="quiz-control-buttons" class="quiz-control-buttons js-quiz-control-buttons">

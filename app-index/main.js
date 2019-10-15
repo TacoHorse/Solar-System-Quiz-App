@@ -1,32 +1,71 @@
 `use strict`
 
+// Primary function call to serve the quiz to the user
+// Performs preliminary checks on the current state of the form and executes
+// Behavior as necessary
 function serveQuiz() {
-    renderCurrentFormState();
-}
 
-function renderCurrentFormState() {
-    $('.js-quiz-control-buttons').on('click', '.js-quiz-next-button', e => {
-        if ($('.js-quiz-next-button').attr('value') === 'Start Quiz') {
-            $('.js-quiz-next-button').attr('value', 'Next Question');
-        }
-        if($('input:radio:checked').length > 0){
-        let restart = false;
-        let answer = validateUserAnswer(STORE.currentPlanet, STORE.questionNumber);
-        let position = handleUserPosition(restart);
-        let score = handleUserScore(answer);
-        renderPlanetProfile();
-        renderUserInformation(position, score);
-        renderQuestion(STORE.currentPlanet);
-        renderOptions(STORE.currentPlanet);
-        }
-        else{
-            alert('Please select an answer');
-         }
+    $('.js-quiz-control-buttons').on('click', '.js-quiz-next-button', e => { // If the user hits the 'next' button'
+
+    if (STORE.questionNumber >= 16) {
+        renderSummary();
+    } else {
+        STORE.restart = false; // User is not restarting
+        STORE.answer = validateUserAnswer(STORE.currentPlanet, STORE.questionNumber); // Check the user's answer
+        let boolState = handleFormState(); // Find out the state of the form (has the user seen a factoid or not?)
+
+        if($('input:radio:checked').length > 0) { // If the user has entered an answer
+            if (boolState === true) { // if form is in factoid state
+                handleFactoidState(); // generate factoid for the current planet + question
+                handleAnswerHighlight(STORE.answer); // Highlight the user's choice as incorrect or correct to inform them visually
+            }
+            if (boolState === false) { // if form is not in factoid state
+                renderCurrentFormState(); // generate the next planet + question
+            }
+        }    else // If the user has not entered an answer
+        alert('Please select an answer');
+    }
+
+});
+    
+
+    $('.js-quiz-control-buttons').on('click', '.js-quiz-restart-button', e => { // if the user hits restart quiz
+
+        STORE.restart = true; // User is restarting
+        handleUserPosition(STORE.restart); // Reset user position
+        $('.js-quiz-restart-button').prop('disabled', true); // Disable restart button
+
     });
 }
 
-function renderPreQuestionState () {
-    
+// Generates the pre-answer form state
+function renderCurrentFormState() {
+        $('.js-quiz-next-button').attr('value', 'Check Answer'); // Sets the value of the next button to 'check answer'
+        $('.js-quiz-restart-button').prop('disabled', false); // Makes sure the Restart button is enabled
+        let position = handleUserPosition(STORE.restart); // Increment user position 
+        let score = handleUserScore(STORE.answer); // Increment user score
+        $('.js-quiz-form').data('form-state', 'factoid'); // Set form state to factoid
+        renderPlanetProfile(); // Generate the planet profile
+        renderUserInformation(position, score); // Display the new user score information
+        renderQuestion(STORE.currentPlanet); // Display the next question
+        renderOptions(STORE.currentPlanet); // Display the options for that question
+}
+
+// Display the factoid for the current question in STORE.questionNumber
+function handleFactoidState() {
+    $('.js-quiz-next-button').attr('value', 'Next Question'); // Sets the value of the next button to 'next question'
+    renderFactoid(STORE.currentPlanet); // Render the factoid for the current planet
+    $('.js-quiz-form').data('form-state', 'asking'); // Set form state to asking
+}
+
+// Creates a boolean value for the state of the form where
+// true = factoid state, false = asking state
+function handleFormState() {
+    let formState = $('.js-quiz-form').data('form-state');
+    if (formState === 'factoid') {
+        return true;
+    }
+    else return false;
 }
 
 /*Check the user's input answer against the correct answer
@@ -41,7 +80,7 @@ function validateUserAnswer(planet, id) {
          return true;
      }
      else {
-        for (let i=0; i <= 2; i++) { // loop through array until
+        for (let i=0; i <= 2; i++) { // loop through array until question is found
             currId = STORE.planets[position][planet][i].id; // current id to look at
             if (currId === id) { // if it matches passed id
                 correctAnswer = STORE.planets[position][planet][i].correct; // set correct answer
@@ -81,6 +120,7 @@ function handleUserScore(isCorrect) {
 function  handleUserPosition(hasRestarted) {
        if (hasRestarted === true) {
            STORE.questionNumber = 0;
+           STORE.currentPlanet = 'not-started';
            return `Question: ${STORE.questionNumber}/16`;
        }
        else if (hasRestarted === false) {
@@ -112,11 +152,10 @@ function renderOptions(planet) {
         }
         for (let i = 0; i <= 3; i++) { // loop through the options array
             output += `<label for="user-answer-${i}" class="radio-labels">
-                        <input type="radio" name="user-answers" id="user-answer-${i}" class="user-answer-${i}">
-                        ${options[i]}</label>`; // create the apprporiate DOM elements for that option
+                        <input type="radio" name="user-answers" id="user-answer-${i}" class="user-answers js-user-answers">${options[i]}</label>`; // create the apprporiate DOM elements for that option
         }
         output += '</span>';
-        $('.js-multiple-choice').replaceWith(output); //temporary
+        $('.js-multiple-choice').replaceWith(output);
 }
 
 // Pass current planet to render current question
@@ -149,7 +188,7 @@ function renderUserInformation(position, score) {
     $('.js-quiz-progress').replaceWith(output);
 }
 
-// Renders a factoid for the current question
+// Pass the current planet to render a factoid for the current question
 function renderFactoid (planet) {
     const currentQuestion = STORE.questionNumber; // get current question number
     const position = planetToNumber(planet); // convert planet to array position number
@@ -169,7 +208,7 @@ function renderFactoid (planet) {
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
-// Renders the planet profile shown at the top of the page
+// Renders the planet profile shown at the top of the page, sets new current planet in STORE
 function renderPlanetProfile () {
     if (STORE.questionNumber === 0) {
         let output = `<h1>Solar System Quiz</h1>
@@ -185,7 +224,7 @@ function renderPlanetProfile () {
                     if (id === STORE.questionNumber) {
                         STORE.currentPlanet = planet;
                         let output = `<h1>${planet}</h1>
-                        <p>
+                        <p class="planet-profile">
                         <span class="planet-circumference js-planet-circumference">Circumference: ${STORE.planets[i][planet][2].facts[0].circumference} </span><br />
                         <span class="planet-circumference js-planet-circumference">Distance from Sun (light minutes): ${STORE.planets[i][planet][2].facts[1].distance} </span><br />
                         <span class="planet-circumference js-planet-circumference">Planet Type: ${STORE.planets[i][planet][2].facts[2].type} </span><br />
@@ -198,6 +237,24 @@ function renderPlanetProfile () {
             }
         }
     }
+}
+
+// Renders the summary of the current quiz session
+function renderSummary() {
+    const percentCorrect = STORE.scoreCorrect / 16;
+    const percentIncorrect = STORE.scoreIncorrect / 16;
+    const quizHeader = `<h1>Quiz Results</h1>`;
+    const quizDoneMessage = `<section class="quiz-questions-answers js-quiz-questions-answers">You have reached the end of the quiz! Below you can find a summary of your quiz results</section>`;
+    const summaryDetails = `<span class="multiple-choice js-multiple-choice" role="question choices"><p>Questions Correct: ${STORE.scoreCorrect}  ${percentCorrect}</p><p>Questions Incorrect: ${STORE.scoreIncorrect}  ${percentIncorrect}</p></span>`;
+
+    $('.js-quiz-progress').empty();
+    $('.js-quiz-intro-planet-profile').empty();
+    $('.js-quiz-control-buttons').empty();
+    $('.js-quiz-questions-answer').empty();
+        $('.js-quiz-intro-planet-profile').append(quizHeader);
+        $('.js-quiz-questions-answers').replaceWith(quizDoneMessage);
+        $('.js-multiple-choice').replaceWith(summaryDetails);
+
 }
 
 // Takes a planet name as an input and returns its (array position) number
@@ -230,6 +287,40 @@ function planetToNumber(planet) {
             break;   
     }
     return planetNum;
+}
+
+// Highlights correct answers when user is told factoid
+function switchCorrectAnswer() {
+    $("input[name=user-answers]:checked").parent('label').addClass('correct');
+    $('.js-multiple-choice').addClass('correct-box');
+}
+
+// Highlights incorrect answers when users is told factoid, also highlights correct answer
+function switchIncorrectAnswer() {
+    const id = STORE.questionNumber;
+    const planet = STORE.currentPlanet;
+    const position = planetToNumber(planet);
+    let correctAnswer = '';
+
+    for (let i=0; i <= 2; i++) { // loop through array until question is found
+        currId = STORE.planets[position][planet][i].id; // current id to look at
+        if (currId === id) { // if it matches passed id
+            correctAnswer = STORE.planets[position][planet][i].correct; // set correct answer
+        }
+    }
+    
+    $(`label:contains('${correctAnswer}')`).addClass('correct');
+    $("input[name=user-answers]:checked").parent('label').addClass('incorrect');
+    $('.js-multiple-choice').addClass('incorrect-box');
+}
+
+function handleAnswerHighlight(userAnswer) {
+    if (userAnswer === true) {
+        switchCorrectAnswer();
+    }
+    if (userAnswer === false){
+        switchIncorrectAnswer();
+    }
 }
 
 $(serveQuiz);

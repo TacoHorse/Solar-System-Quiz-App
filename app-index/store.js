@@ -291,7 +291,9 @@ const STORE = {
     currentPlanet: 'not-started',
     questionNumber: 0,
     scoreCorrect: 0,
-    scoreIncorrect: 0
+    scoreIncorrect: 0,
+    restart: false,
+    answer: ''
 }
 
 
