@@ -34,7 +34,8 @@ function serveQuiz() {
         STORE.restart = true; // User is restarting
         handleUserPosition(STORE.restart); // Reset user position
         $('.js-quiz-restart-button').prop('disabled', true); // Disable restart button
-
+        renderDefaultPage();
+        STORE.restart = false;
     });
 }
 
@@ -120,6 +121,8 @@ function handleUserScore(isCorrect) {
 function  handleUserPosition(hasRestarted) {
        if (hasRestarted === true) {
            STORE.questionNumber = 0;
+           STORE.scoreCorrect = 0;
+           STORE.scoreIncorrect = 0;
            STORE.currentPlanet = 'not-started';
            return `Question: ${STORE.questionNumber}/16`;
        }
@@ -223,13 +226,14 @@ function renderPlanetProfile () {
                 if (typeof(id) != 'undefined') { 
                     if (id === STORE.questionNumber) {
                         STORE.currentPlanet = planet;
-                        let output = `<h1>${planet}</h1>
+                        let output = `<img class="planet-picture js-planet-picture" src="images/${planet}.jpg"></img>
+                        <section><h1>${planet}</h1>
                         <p class="planet-profile">
                         <span class="planet-circumference js-planet-circumference">Circumference: ${STORE.planets[i][planet][2].facts[0].circumference} </span><br />
                         <span class="planet-circumference js-planet-circumference">Distance from Sun (light minutes): ${STORE.planets[i][planet][2].facts[1].distance} </span><br />
                         <span class="planet-circumference js-planet-circumference">Planet Type: ${STORE.planets[i][planet][2].facts[2].type} </span><br />
                         <span class="planet-circumference js-planet-circumference">Daytime Temperature: ${STORE.planets[i][planet][2].facts[3].temp}</span>
-                        </p>`;
+                        </p></section>`;
                         $('.js-quiz-intro-planet-profile').empty();
                          $('.js-quiz-intro-planet-profile').append(output);
                     }
@@ -254,6 +258,11 @@ function renderSummary() {
         $('.js-quiz-intro-planet-profile').append(quizHeader);
         $('.js-quiz-questions-answers').replaceWith(quizDoneMessage);
         $('.js-multiple-choice').replaceWith(summaryDetails);
+
+}
+
+// Resets the entire body of the page to default for new quiz
+function renderDefaultPage() {
 
 }
 
