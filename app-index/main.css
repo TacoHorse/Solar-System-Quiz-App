@@ -114,14 +114,6 @@ p.planet-profile {
         padding: 1em;
     }
 
-    footer {
-        margin-top: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 5vh;
-    }
-
     .quiz-progress {
         display: flex;
         justify-content: space-between;
@@ -173,6 +165,20 @@ p.planet-profile {
         width: 50vw;
         height: 5vh;
     }
+
+    .quiz-footer {
+        display: flex;
+        justify-content: space-evenly;
+        background: black;
+        margin-bottom: 0px;
+        border-top: solid 1px white;
+    }
+
+    .social {
+        width: 64px;
+        height: 64px;
+        padding: 10px;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -209,6 +215,7 @@ p.planet-profile {
         width: 30vh;
         height: 3vh;
     }
+
 }
 
 @media screen and (min-width: 1900px) {

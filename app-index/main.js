@@ -191,7 +191,7 @@ function renderQuestion(planet) {
 
 // Pass completed strings from handleUserScore and handleUserPosition 
 function renderUserInformation(position, score) {
-    let output = `<section class="quiz-progress js-quiz-progress">
+    let output = `<section role="user-progress" class="quiz-progress js-quiz-progress">
                     <span class="question-number js-question-number">${position}</span>
                     <span class="question-grading js-question-grading">${score}</span>
                     </section>`;
@@ -214,7 +214,7 @@ function renderFactoid(planet) {
             }
         }
     }
-    let output = `<section class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
+    let output = `<section role="answer facts" class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
@@ -272,7 +272,7 @@ function renderSummary() {
 
 // Render the default page for restart
 function renderDefaultPage() {
-    const quizOptions = `<span class="multiple-choice js-multiple-choice" role="question choices">
+    const quizOptions = `<span role="select answer" class="multiple-choice js-multiple-choice" role="question choices">
     <label for="user-answer-0" class="radio-labels">
         <input type="radio" name="user-answers" id="user-answer-0" class="user-answers js-user-answers">A</label>
     <label for="user-answer-1" class="radio-labels">

@@ -9,15 +9,15 @@
     </head>
     
     <body class="main-body">
-        <header class="quiz-intro-planet-profile js-quiz-intro-planet-profile">
+        <header role="quiz-introduction" class="quiz-intro-planet-profile js-quiz-intro-planet-profile">
             <img class="planet-picture js-planet-picture" src="images/solarsys2.png"></img>
             <section>
             <h1>Solar System Quiz</h1>
             <p class="planet-profile js-planet-profile">Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
             </section>
         </header>
-        <form class="quiz-form js-quiz-form" data-form-state="asking">
-            <section class="quiz-progress js-quiz-progress">
+        <form role="quiz-form" class="quiz-form js-quiz-form" data-form-state="asking">
+            <section role="user-progress" class="quiz-progress js-quiz-progress">
                 <span class="question-number">Question: Not Started</span>
                 <span class="question-grading">Correct: 0 Incorrect: 0</span>
             </section>
@@ -42,7 +42,12 @@
                 <input type="button" name="next-question-button" id="next-question-button" class="quiz-buttons js-quiz-buttons js-quiz-next-button" value="Start Quiz">
             </span>
         </form>
-        <footer class="quiz-footer"><span>Social and other links will go here</span></footer>
+        <footer class="quiz-footer"><span>
+            <a href="https://www.linkedin.com/in/sean-cowan-458540192/"><img class="social" src="images/linkedin.png" alt="Linked Profile"></img></a>
+            <a href="https://twitter.com/IsurusMako"><img class="social" src="images/twitter.png" alt="Twitter Profile"></img></a>
+            <a href="https://github.com/TacoHorse"><img class="social" src="images/github.png" alt="Github Profile"></img></a>
+            <a href="mailto:sean.cowan1@gmail.com"><img class="social" src="images/email.png" alt="Send E-mail"></img></a>
+        </span></footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!-- Include and check jQuery library integrity -->
     <script src="store.js"></script>

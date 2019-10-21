@@ -128,7 +128,7 @@ const STORE = {
                 options: [
                     "Mount Vesuvius",
                     "Mount Rushmore",
-                    "olympus Mons",
+                    "Olympus Mons",
                     "Ben Nevis"
                 ],
                 correct: "Olympus Mons",
