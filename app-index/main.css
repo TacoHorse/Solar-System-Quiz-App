@@ -28,19 +28,73 @@ p.planet-profile {
     border: solid 5px red;
 }
 
+.quiz-buttons {
+    width: 30vh;
+    height: 3vh;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #025fd8;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66);
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    margin: 20px;
+}
+.quiz-buttons:hover {
+    border: 1px solid #007cad;
+    background: rgba(79,79,79,1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  .quiz-buttons:active {
+    border: 1px solid #018dc4;
+    background: #00a6e8;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+    text-shadow: none;
+    -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  .quiz-buttons:disabled {
+    border: 1px solid grey;
+    background: grey;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+    text-shadow: none;
+  }
+
 @media screen and (min-width: 0px) {
     body {
         min-height: 100vh;
         margin: 0px;
         padding: 0px;
         background: black;
-        color: white;
+        color: rgb(245, 245, 245);
         font-family: "Roboto", sans-serif;
         font-size: 2.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         text-rendering: optimizeLegibility;
+        text-shadow: -1px -1px 0 rgba(83, 83, 83, 0.66);
     }
 
     header {
@@ -54,6 +108,10 @@ p.planet-profile {
 
     .planet-picture {
         display: none;
+    }
+
+    p.planet-profile {
+        padding: 1em;
     }
 
     footer {
@@ -98,12 +156,23 @@ p.planet-profile {
         margin: 2vh;
     }
 
+    .quiz-results {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+    }
+
     .quiz-control-buttons {
         display: flex;
         justify-content: space-between;
+        margin-top: auto;
     }
 
-    
+    .quiz-buttons {
+        width: 50vw;
+        height: 5vh;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -119,65 +188,27 @@ p.planet-profile {
         flex-grow: 1;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        margin-bottom: 5vh;
+    }
+
+    p.planet-profile {
+        width: 300px;
+        padding-left: 2vh;
     }
 
     .planet-picture {
         display: block;
         width: 200px;
         height: 200px;
+        margin-top: 5vh;
     }
     .quiz-buttons {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-        cursor: pointer;
-        padding: 10px 20px;
-        border: 1px solid #018dc4;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        font: normal medium/normal Arial, Helvetica, sans-serif;
-        color: rgba(255,255,255,0.9);
-        -o-text-overflow: clip;
-        text-overflow: clip;
-        background: #025fd8;
-        -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-        box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-        text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
-        -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-        -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-        -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-        transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-        margin: 20px;
+        width: 30vh;
+        height: 3vh;
     }
-    .quiz-buttons:hover {
-        border: 1px solid #007cad;
-        background: rgba(79,79,79,1);
-        -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) ;
-        box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) ;
-        -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-        -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-        -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-        transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-      }
-      .quiz-buttons:active {
-        border: 1px solid #018dc4;
-        background: #00a6e8;
-        -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
-        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
-        text-shadow: none;
-        -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
-        -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
-        -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
-        transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
-      }
-      .quiz-buttons:disabled {
-        border: 1px solid grey;
-        background: grey;
-        -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
-        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
-        text-shadow: none;
-      }
-
 }
 
 @media screen and (min-width: 1900px) {
@@ -185,10 +216,6 @@ p.planet-profile {
         font-size: 1em;
         background: black url("solarsys.jpg");
         background-size: cover;
-    }
-
-    p.planet-profile {
-        width: 500px;
     }
 
     .quiz-form {
