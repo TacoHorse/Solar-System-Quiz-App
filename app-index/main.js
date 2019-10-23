@@ -194,8 +194,8 @@ function renderQuestion(planet) {
 // Pass completed strings from handleUserScore and handleUserPosition 
 function renderUserInformation(position, score) {
     let output = `<section aria-label="User progress" class="quiz-progress js-quiz-progress">
-                    <span aria-label="Current Question: ${position}" class="question-number js-question-number">${position}</span>
-                    <span aria-label="${score}" class="question-grading js-question-grading">${score}</span>
+                    <span class="question-number js-question-number">${position}</span>
+                    <span class="question-grading js-question-grading">${score}</span>
                     </section>`;
     $('.js-quiz-progress').replaceWith(output);
 }
@@ -223,7 +223,7 @@ function renderFactoid(planet) {
 // Renders the planet profile shown at the top of the page, sets new current planet in STORE
 function renderPlanetProfile() {
     if (STORE.questionNumber === 0) {
-        let output = `<h1 role="heading" aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
+        let output = `<h1 aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
         <p class="planet-profile js-planet-profile">Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>`;
         $('.js-quiz-intro-planet-profile').append(output);
     }
@@ -236,7 +236,7 @@ function renderPlanetProfile() {
                     if (id === STORE.questionNumber) {
                         STORE.currentPlanet = planet;
                         let output = `<img class="planet-picture js-planet-picture" src="images/${planet}.jpg" alt="Image , picture of ${planet}">
-                        <section><h1 role="heading" aria-label="Profile of the planet ${planet}">${planet}</h1>
+                        <section><h1 aria-label="Profile of the planet ${planet}">${planet}</h1>
                         <p class="planet-profile js-planet-profile">
                         <span class="planet-circumference js-planet-circumference"><strong>Circumference:</strong> ${STORE.planets[i][planet][2].facts[0].circumference} </span><br />
                         <span class="planet-distance js-planet-distance"><strong>Distance from Sun (light minutes):</strong> ${STORE.planets[i][planet][2].facts[1].distance} </span><br />
@@ -256,10 +256,10 @@ function renderPlanetProfile() {
 function renderSummary() {
     const percentCorrect = STORE.scoreCorrect / 16;
     const percentIncorrect = STORE.scoreIncorrect / 16;
-    const quizHeader = `<h1 role="heading" aria-label="Your results">Quiz Results</h1>`;
+    const quizHeader = `<h1 aria-label="Your results">Quiz Results</h1>`;
     const quizDoneMessage = `<section class="quiz-questions-answers js-quiz-questions-answers">You have reached the end of the quiz! Below you can find a summary of your quiz results</section>`;
     const summaryDetails = `<span class="quiz-results js-quiz-results"><p>Questions Correct: ${STORE.scoreCorrect} / ${percentCorrect * 100}%</p><p>Questions Incorrect: ${STORE.scoreIncorrect} / ${percentIncorrect * 100}%</p><span role="quiz-control-buttons" class="quiz-results-buttons js-quiz-results-buttons">
-    <input type="button" role="button" aria-label="Retake the quiz" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
+    <input type="button"  aria-label="Retake the quiz" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
 </span></span>`;
 
     $('.js-quiz-progress').empty();
@@ -286,7 +286,7 @@ function renderDefaultPage() {
     </span>`;
     const quizHeader = `<img class="planet-picture js-planet-picture" src="images/solarsys2.png" alt="Image , Diagram of the Solar System">
     <section>
-    <h1 role="heading" aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
+    <h1 aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
     <p class="planet-profile js-planet-profile">Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
     </section>`;
     const quizIntro = `<section class="quiz-questions-answers js-quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>`;
