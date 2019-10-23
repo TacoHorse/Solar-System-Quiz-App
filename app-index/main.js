@@ -16,6 +16,12 @@ function serveQuiz() {
         handleRestartButton();
 
     });
+
+    $('.js-quiz-form').on('click', '.js-quiz-restart-button', e => { // if the user retakes the quiz
+
+        handleRestartButton();
+
+    });
 }
 
 // Handles form behavior for when the next button is clicked 
@@ -258,9 +264,9 @@ function renderSummary() {
     const percentIncorrect = STORE.scoreIncorrect / 16;
     const quizHeader = `<h1>Quiz Results</h1>`;
     const quizDoneMessage = `<section class="quiz-questions-answers js-quiz-questions-answers">You have reached the end of the quiz! Below you can find a summary of your quiz results</section>`;
-    const summaryDetails = `<span class="quiz-results js-quiz-results"><p>Questions Correct: ${STORE.scoreCorrect} / ${percentCorrect * 100}%</p><p>Questions Incorrect: ${STORE.scoreIncorrect} / ${percentIncorrect * 100}%</p><span role="quiz-control-buttons" class="quiz-results-buttons js-quiz-results-buttons">
-    <input type="button"  aria-label="Retake the quiz" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
-</span></span>`;
+    const summaryDetails = `<span class="multiple-choice js-multiple-choice"><span class="quiz-results js-quiz-results"><p>Questions Correct: ${STORE.scoreCorrect} / ${percentCorrect * 100}%</p><p>Questions Incorrect: ${STORE.scoreIncorrect} / ${percentIncorrect * 100}%</p><span class="quiz-results-buttons js-quiz-results-buttons">
+    <input type="button" aria-label="Retake the quiz" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
+</span></span></span>`;
 
     $('.js-quiz-progress').empty();
     $('.js-quiz-intro-planet-profile').empty();
