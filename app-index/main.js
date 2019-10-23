@@ -51,6 +51,7 @@ function handleRestartButton() {
 // Display the factoid for the current question in STORE.questionNumber
 function handleFactoidState() {
     $('.js-quiz-next-button').attr('value', 'Next Question'); // Sets the value of the next button to 'next question'
+    $('.js-quiz-next-button').attr('aria-label', 'Proceed to next question'); // Sets the value of the aria label for the button
     renderFactoid(STORE.currentPlanet); // Render the factoid for the current planet
     $('.js-quiz-form').data('form-state', 'asking'); // Set form state to asking
 }
@@ -133,6 +134,7 @@ function handleUserPosition(hasRestarted) {
 // Handles the question form state
 function handleQuestion() {
     $('.js-quiz-next-button').attr('value', 'Check Answer'); // Sets the value of the next button to 'check answer'
+    $('.js-quiz-next-button').attr('aria-label', 'Check Answer'); // Set the aria label for the button
     $('.js-quiz-restart-button').prop('disabled', false); // Makes sure the Restart button is enabled
     let position = handleUserPosition(STORE.restart); // Increment user position 
     let score = handleUserScore(STORE.answer); // Increment user score
@@ -150,7 +152,7 @@ function renderOptions(planet) {
     const length = STORE.planets[position][planet].length; // count length of planet array
     let options = '';
     let testId = '';
-    let output = '<span class="multiple-choice js-multiple-choice" role="question choices">';
+    let output = '<span class="multiple-choice js-multiple-choice">';
     for (let i = 0; i < length; i++) { // for each element in the planets specific array
         testId = STORE.planets[position][planet][i].id; // check the id property
         if (typeof (testId) != 'undefined') {
@@ -185,15 +187,15 @@ function renderQuestion(planet) {
             }
         }
     }
-    output = `<section class="quiz-questions-answers js-quiz-questions-answers">${question}</section>`; // build apprporiate DOM elements
+    output = `<section role="region" aria-label="Question: ${question}" class="quiz-questions-answers js-quiz-questions-answers">${question}</section>`; // build apprporiate DOM elements
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
 // Pass completed strings from handleUserScore and handleUserPosition 
 function renderUserInformation(position, score) {
-    let output = `<section role="user-progress" class="quiz-progress js-quiz-progress">
-                    <span class="question-number js-question-number">${position}</span>
-                    <span class="question-grading js-question-grading">${score}</span>
+    let output = `<section aria-label="User progress" class="quiz-progress js-quiz-progress">
+                    <span aria-label="Current Question: ${position}" class="question-number js-question-number">${position}</span>
+                    <span aria-label="${score}" class="question-grading js-question-grading">${score}</span>
                     </section>`;
     $('.js-quiz-progress').replaceWith(output);
 }
@@ -214,14 +216,14 @@ function renderFactoid(planet) {
             }
         }
     }
-    let output = `<section role="answer facts" class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
+    let output = `<section role="region" aria-label="Information on correct answer: ${factoid}"class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
 // Renders the planet profile shown at the top of the page, sets new current planet in STORE
 function renderPlanetProfile() {
     if (STORE.questionNumber === 0) {
-        let output = `<h1>Solar System Quiz</h1>
+        let output = `<h1 role="heading" aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
         <p class="planet-profile js-planet-profile">Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>`;
         $('.js-quiz-intro-planet-profile').append(output);
     }
@@ -233,8 +235,8 @@ function renderPlanetProfile() {
                 if (typeof (id) != 'undefined') {
                     if (id === STORE.questionNumber) {
                         STORE.currentPlanet = planet;
-                        let output = `<img class="planet-picture js-planet-picture" src="images/${planet}.jpg"></img>
-                        <section><h1>${planet}</h1>
+                        let output = `<img class="planet-picture js-planet-picture" src="images/${planet}.jpg" alt="Image , picture of ${planet}">
+                        <section><h1 role="heading" aria-label="Profile of the planet ${planet}">${planet}</h1>
                         <p class="planet-profile js-planet-profile">
                         <span class="planet-circumference js-planet-circumference"><strong>Circumference:</strong> ${STORE.planets[i][planet][2].facts[0].circumference} </span><br />
                         <span class="planet-distance js-planet-distance"><strong>Distance from Sun (light minutes):</strong> ${STORE.planets[i][planet][2].facts[1].distance} </span><br />
@@ -254,10 +256,10 @@ function renderPlanetProfile() {
 function renderSummary() {
     const percentCorrect = STORE.scoreCorrect / 16;
     const percentIncorrect = STORE.scoreIncorrect / 16;
-    const quizHeader = `<h1>Quiz Results</h1>`;
+    const quizHeader = `<h1 role="heading" aria-label="Your results">Quiz Results</h1>`;
     const quizDoneMessage = `<section class="quiz-questions-answers js-quiz-questions-answers">You have reached the end of the quiz! Below you can find a summary of your quiz results</section>`;
     const summaryDetails = `<span class="quiz-results js-quiz-results"><p>Questions Correct: ${STORE.scoreCorrect} / ${percentCorrect * 100}%</p><p>Questions Incorrect: ${STORE.scoreIncorrect} / ${percentIncorrect * 100}%</p><span role="quiz-control-buttons" class="quiz-results-buttons js-quiz-results-buttons">
-    <input type="button" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
+    <input type="button" role="button" aria-label="Retake the quiz" name="stop-start-restart-button" id="stop-start-restart-button" class="quiz-buttons js-quiz-buttons js-quiz-restart-button" value="Take Again">
 </span></span>`;
 
     $('.js-quiz-progress').empty();
@@ -272,7 +274,7 @@ function renderSummary() {
 
 // Render the default page for restart
 function renderDefaultPage() {
-    const quizOptions = `<span role="select answer" class="multiple-choice js-multiple-choice" role="question choices">
+    const quizOptions = `<span class="multiple-choice js-multiple-choice">
     <label for="user-answer-0" class="radio-labels">
         <input type="radio" name="user-answers" id="user-answer-0" class="user-answers js-user-answers">A</label>
     <label for="user-answer-1" class="radio-labels">
@@ -282,9 +284,9 @@ function renderDefaultPage() {
     <label for="user-answer-3" class="radio-labels">
         <input type="radio" name="user-answers" id="user-answer-3" class="user-answers js-user-answers">D</label>
     </span>`;
-    const quizHeader = `<img class="planet-picture js-planet-picture" src="images/solarsys2.png"></img>
+    const quizHeader = `<img class="planet-picture js-planet-picture" src="images/solarsys2.png" alt="Image , Diagram of the Solar System">
     <section>
-    <h1>Solar System Quiz</h1>
+    <h1 role="heading" aria-label="Welcome to the Solar System Quiz">Solar System Quiz</h1>
     <p class="planet-profile js-planet-profile">Journey through the Solar System with this short quiz and learn some cool facts along the way.</p>
     </section>`;
     const quizIntro = `<section class="quiz-questions-answers js-quiz-questions-answers">The Quiz consists of 16 questions, two for each planet, and will be presented in planetary order.  You cannot repeat questions but you also cannot fail.  Select any radial button below and press Start to begin!</section>`;
