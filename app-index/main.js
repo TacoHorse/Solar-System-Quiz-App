@@ -187,7 +187,7 @@ function renderQuestion(planet) {
             }
         }
     }
-    output = `<section role="region" aria-label="Question: ${question}" class="quiz-questions-answers js-quiz-questions-answers">${question}</section>`; // build apprporiate DOM elements
+    output = `<section aria-label="Question: ${question}" class="quiz-questions-answers js-quiz-questions-answers">${question}</section>`; // build apprporiate DOM elements
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
@@ -216,7 +216,7 @@ function renderFactoid(planet) {
             }
         }
     }
-    let output = `<section role="region" aria-label="Information on correct answer: ${factoid}"class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
+    let output = `<section aria-label="Information on correct answer: ${factoid}"class="quiz-questions-answers js-quiz-questions-answers">${factoid}</section>`
     $('.js-quiz-questions-answers').replaceWith(output);
 }
 
